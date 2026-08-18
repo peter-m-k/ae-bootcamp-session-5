@@ -114,6 +114,32 @@ This project uses specialized agent modes for different workflows. Use the appro
 - Test isolation and stability checks
 - End-to-end test coverage validation
 
+## Memory System
+
+This project uses a two-tier memory system to maintain context across development sessions:
+
+**Persistent Memory** (`.github/copilot-instructions.md`):
+- Foundational principles and workflows (this file)
+- Project-wide conventions and standards
+- Stable and infrequently changed
+
+**Working Memory** (`.github/memory/`):
+- Development discoveries and patterns
+- Historical session summaries
+- Active session notes (ephemeral)
+
+**How to Use**:
+- During active development, take notes in `.github/memory/scratch/working-notes.md` (NOT committed)
+- At end of session, summarize key findings into `.github/memory/session-notes.md` (committed)
+- Document recurring code patterns in `.github/memory/patterns-discovered.md` (committed)
+- AI references these files when providing context-aware suggestions
+
+**Memory Files**:
+- [.github/memory/README.md](memory/README.md) - Comprehensive memory system documentation
+- [.github/memory/session-notes.md](memory/session-notes.md) - Historical session summaries
+- [.github/memory/patterns-discovered.md](memory/patterns-discovered.md) - Code patterns library
+- `.github/memory/scratch/working-notes.md` - Active session work (ignored by git)
+
 ## Workflow Utilities
 
 GitHub CLI commands are available for workflow automation (use in any mode):

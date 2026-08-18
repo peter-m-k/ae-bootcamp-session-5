@@ -1,0 +1,6 @@
+# Ignore all files in scratch/ directory
+# This directory is for ephemeral working notes during active development
+# Key findings should be extracted to session-notes.md and patterns-discovered.md
+
+*
+!.gitignore

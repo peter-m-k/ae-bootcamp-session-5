@@ -92,6 +92,14 @@ app.delete('/api/todos/:id', (req, res) => {
   res.json({ message: 'Todo deleted' });
 });
 
+
+// Test-only endpoint to reset state (for UI test isolation)
+app.post('/api/test/reset', (req, res) => {
+  todos = [];
+  nextId = 1;
+  res.json({ message: 'State reset successful' });
+});
+
 // INTENTIONAL ISSUE: Missing error handling middleware
 
 module.exports = app;
